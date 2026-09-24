@@ -1,0 +1,127 @@
+
+<!-- =======================================================================
+    ATIVIDADE PRÁTICA: MÓDULO 02 - ESTRUTURA E ATRIBUTOS HTML
+    ======================================================================= -->
+
+<!-- CONCEITO 1: ATRIBUTO GLOBAL 'lang' -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática - Módulo 2</title>
+    
+    <!-- Vinculando o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONCEITO 2: ATRIBUTO GLOBAL 'class' -->
+    <h1 class="titulo-principal">Cadastro Geral do Estudante</h1>
+
+    <!-- CONCEITO 3: ATRIBUTO GLOBAL 'style' -->
+    <p style="color: #2563eb; font-size: 15px;">
+        Preencha os campos abaixo para testar os atributos do Módulo 02!
+    </p>
+
+    <!-- INÍCIO DO FORMULÁRIO -->
+    <form action="#" method="POST" class="formulario-box">
+
+        <!-- SEÇÃO 1: ATRIBUTO 'id' E ATRIBUTO 'placeholder' -->
+        <h2 class="subtitulo-secao">1. Identificação do Aluno</h2>
+
+        <!-- EXEMPLO 1.1: Nome Completo -->
+        <div class="grupo-campo">
+            <label for="campo-nome" class="rotulo">Nome Completo:</label><br>
+            <input type="text" id="campo-nome" name="nome" placeholder="Digite seu nome completo">
+        </div>
+
+        <br>
+
+        <!-- EXEMPLO 1.2: Apelido -->
+        <div class="grupo-campo">
+            <label for="campo-apelido" class="rotulo">Como prefere ser chamado:</label><br>
+            <input type="text" id="campo-apelido" name="apelido" placeholder="Ex: Mari ou Leo">
+        </div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <!-- SEÇÃO 2: ATRIBUTO BOOLEANO 'required' -->
+        <h2 class="subtitulo-secao">2. Campos Obrigatórios</h2>
+
+        <!-- EXEMPLO 2.1: E-mail Escolar -->
+        <div class="grupo-campo">
+            <label for="campo-email" class="rotulo">E-mail Escolar:</label><br>
+            <input type="email" id="campo-email" name="email" placeholder="aluno@escola.com" required>
+        </div>
+
+        <br>
+
+        <!-- EXEMPLO 2.2: Senha de Acesso -->
+        <div class="grupo-campo">
+            <label for="campo-senha" class="rotulo">Senha de Acesso:</label><br>
+            <input type="password" id="campo-senha" name="senha" placeholder="Digite uma senha" required>
+        </div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <!-- SEÇÃO 3: ATRIBUTO BOOLEANO 'checked' -->
+        <h2 class="subtitulo-secao">3. Opções Marcadas por Padrão</h2>
+
+        <!-- EXEMPLO 3.1: Turno Escolar (Radio Button) -->
+        <div class="grupo-campo">
+            <p class="rotulo">Selecione seu Turno:</p>
+
+            <div class="opcao-radio">
+                <input type="radio" id="turno-manha" name="turno" value="manha" checked>
+                <label for="turno-manha">Manhã (Opção padrão)</label>
+            </div>
+
+            <div class="opcao-radio">
+                <input type="radio" id="turno-tarde" name="turno" value="tarde">
+                <label for="turno-tarde">Tarde</label>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- EXEMPLO 3.2: Avisos por E-mail (Checkbox) -->
+        <div class="grupo-campo">
+            <p class="rotulo">Termos e Avisos:</p>
+
+            <div>
+                <input type="checkbox" id="notify-email" name="notificacoes" value="email" checked>
+                <label for="notify-email">Desejo receber avisos das aulas por e-mail</label>
+            </div>
+        </div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <!-- SEÇÃO 4: ATRIBUTO BOOLEANO 'disabled' -->
+        <h2 class="subtitulo-secao">4. Campos Bloqueados</h2>
+
+        <!-- EXEMPLO 4.1: Código de Matrícula -->
+        <div class="grupo-campo">
+            <label for="campo-matricula" class="rotulo">Matrícula (Sistema):</label><br>
+            <input type="text" id="campo-matricula" name="matricula" value="2026-ALT-099" disabled>
+        </div>
+
+        <br>
+
+        <!-- EXEMPLO 4.2: Cupom de Desconto -->
+        <div class="grupo-campo">
+            <label for="campo-cupom" class="rotulo">Cupom de Desconto:</label><br>
+            <input type="text" id="campo-cupom" name="cupom" value="INDISPONIVEL" disabled>
+        </div>
+
+        <br>
+
+        <!-- BOTÕES DE AÇÃO DO FORMULÁRIO -->
+        <div class="grupo-botoes">
+            <button type="submit" class="btn-enviar">Enviar Cadastro</button>
+            <button type="reset" class="btn-limpar">Limpar Campos</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
